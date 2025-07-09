@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For My RADHA</title>
+    <link rel="stylesheet" href="new.css" />
+    <style>
+      /* Transparent, minimal play button */
+      #play-btn {
+        background: transparent;
+        border: none;
+        font-size: 2rem;
+        cursor: pointer;
+        color: #ff69b4;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1000;
+        transition: transform 0.3s ease;
+      }
+
+      #play-btn:hover {
+        transform: scale(1.1);
+      }
+
+      #play-btn:disabled {
+        opacity: 0.3;
+        cursor: default;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="animation-box">
+      <div class="first-text">
+        One year ago today I met you, since then my life is filled with happiness.  
+        The way you exist, I believe angels are real.  
+        Thank you for blessing me with your love and your presence. Thank you for everything.
+      </div>
+      <div class="second-text">
+        It's you who taught me what love feels like. You didn't just come into my life — you became it.
+      </div>
+      <div class="third-text">
+        Your presence is my peace, and your smile is my favourite view. I love seeing you blush.
+      </div>
+      <div class="fourth-text">
+        I want nothing more than making you happy and living the happiest life together.
+      </div>
+      <div class="fifth-text">
+        Now that I've found you, I'm never going to let you go.  
+        Love you so much, partner 💖
+      </div>
+    </section>
+
+    <!-- Audio -->
+    <audio id="bg-music" loop>
+      <source src="2.mp3" type="audio/mpeg" />
+    </audio>
+
+    <!-- Transparent one-time play button -->
+    <button id="play-btn" onclick="playOnce()">🎶</button>
+
+    <script>
+      function playOnce() {
+        const audio = document.getElementById("bg-music");
+        const btn = document.getElementById("play-btn");
+        audio.play();
+        btn.disabled = true; // prevent further clicks
+      }
+    </script>
+  </body>
+</html>
